@@ -19,3 +19,5 @@ This is a very simple front end to the site. Think of it like a fun 90s free for
 - Write deploy instructions
 - Write up deploy prep instructions
 	- No we do not need Docker for everything. Node, Ruby, etc. doesn't need a container it's not that complicated, stop complicating everything just because Zuckenborg decided it was cool to do so while he was eating beef brisket or whatever
+
+Testing Commit from Working Copy.
