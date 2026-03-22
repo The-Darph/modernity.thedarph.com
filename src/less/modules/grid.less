@@ -9,7 +9,7 @@
 @max-width: 1140px;
 @min-width: 755px;
 @total-columns: 12;
-@gutter: 3%;
+@gutter: 3;
 
 
 // Containers divide pages into sections
@@ -58,8 +58,8 @@
 // @columns - The number of columns one block spans
 // Defaults to full-page width.
 .create-columns(@i) when (@i > 0) {
- // @column-width: (((@max-width * @i) / @total-columns) * 100) / @max-width;
-  @column-width: (((@max-width * @i) / @total-columns) * 100%) / @max-width;
+  @column-width: (((@max-width * @i) / @total-columns) * 100) / @max-width;
+  // @column-width: (((@max-width * @i) / @total-columns) * 100%) / @max-width;
   @missing-width: (@gutter * ((@total-columns / @i) - 1)) / (@total-columns / @i);
   @width: @column-width - @missing-width;
 
