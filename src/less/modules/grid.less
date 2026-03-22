@@ -6,10 +6,10 @@
  */
 
 // Grid Variables
-@max-width: 1140px;
-@min-width: 755px;
+@max-width: 1280px;
+// @min-width: 755px;
 @total-columns: 12;
-@gutter: 3;
+@gutter: 3%;
 
 
 // Containers divide pages into sections
@@ -19,7 +19,8 @@
 // containers is not supported and is not a
 // good or useful idea anyway.
 .container {
-  padding: 0 20px;
+  // padding: 0 20px;
+  padding: 0 1.5rem;
 }
 
 // A single row contains twelve columns
@@ -28,19 +29,18 @@
 // sections that contain one or more columns. The
 // `.form-row` variant is for use in forms and
 // makes clear what is being styled.
-.row, .form-row {
-  display: block;
+.row,
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(@total-columns, 1fr);
+  gap: @gutter;
+
   width: 100%;
   max-width: @max-width;
-  min-width: @min-width;
+  // min-width: @min-width;
   margin: 0 auto;
-  padding: 0.5rem 0; // Containers have padding so rows don't need them
-  overflow: hidden;
-  .clearfix;
-
-  &.no-pad {
-    padding: 0;
-  }
+  // padding: 0.5rem 0;
+  padding: 1rem;
 }
 
 .row-loose {
@@ -58,34 +58,30 @@
 // @columns - The number of columns one block spans
 // Defaults to full-page width.
 .create-columns(@i) when (@i > 0) {
-  @column-width: (((@max-width * @i) / @total-columns) * 100) / @max-width;
-  // @column-width: (((@max-width * @i) / @total-columns) * 100%) / @max-width;
-  @missing-width: (@gutter * ((@total-columns / @i) - 1)) / (@total-columns / @i);
-  @width: @column-width - @missing-width;
-
-  .col-@{i}, .block-@{i} {
-    display: block;
-    position: relative;
-    float: left;
-    width: @width;
-    margin-right: @gutter;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  .col-@{i},
+  .block-@{i} {
+    grid-column: span @i;
   }
 
-  // Push and pull classes
+  // Push = move right
   .push-@{i} {
-    left: @width + @gutter;
+    grid-column-start: (@i + 1);
   }
 
+  // Pull = move left (relative shift)
   .pull-@{i} {
-    right: @width + @gutter;
+    position: relative;
+    left: -((100% / @total-columns) * @i);
+  }
+
+  .offset-@{i} {
+    @percent-offset: (@i / @total-columns);
+    margin-left: percentage(@percent-offset);
   }
 
   .create-columns(@i - 1);
 }
+
 .create-columns(@total-columns);
 
 //:::: Helper Classes :::://
