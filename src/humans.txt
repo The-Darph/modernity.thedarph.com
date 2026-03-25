@@ -1,14 +1,14 @@
 /* TEAM */
-Your title: Your name.
-Site: email, link to a contact form, etc.
-Twitter: your Twitter username.
-Location: City, Country.
+Your title: The Darph
+Site: thedarph.com
+Twitter: No.
+Location: Chicago, USA
 
 /* THANKS */
-Name: name or url
+Name: You. The listener. The visitor. The user...
 
 /* SITE */
-Last update: YYYY/MM/DD 
-Standards: HTML5, CSS3,..
-Components: Modernizr, jQuery, etc.
-Software: Software used for the development
+Last update: 2026/03/25 
+Standards: HTML5, CSS3, ES6
+Components: Webpack, Vanilla JS
+Software: No AI was used in the development of this website. SublimeText 4, Terminal.app, and Ghostty only

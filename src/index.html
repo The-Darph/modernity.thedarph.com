@@ -4,15 +4,16 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title></title>
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <title>modernity</title>
+  <meta name="description" content="modernity systems. listen to the album." />
+  <meta name="author" content="The Darph" />
   <link rel="author" href="/humans.txt" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/rgx2kfg.css" />
 </head>
 
-<body>
+<body id="home">
 
   <div class="page-header container">
     <div class="row">
@@ -23,6 +24,36 @@
   </div>
 
   <div class="container">
+    <main class="row-loose">
+      <!-- <div class="col-2"></div> -->
+      <div class="col-8-start-3">
+        <h2 class="prompt h4">modernity</h2>
+        <p class="line"></p>
+        <div class="terminal" id="terminal">
+          <p class="prompt input" data-key="C" data-action="/you">[c] continue</p>
+          <p class="prompt input subtle hug" data-key="M" data-action="menu">[m] menu</p>
+        </div>
+
+        <nav class="menu-overlay" id="menu">
+          <div class="menu-inner">
+
+            <p class="prompt"><strong>input accepted.</strong></p>
+
+            <ul>
+              <li class="prompt input" data-key="S" data-action="/you">[s] session</li>
+              <li class="prompt input" data-key="L" data-action="/listen">[l] listen</li>
+              <li class="prompt input" data-key="E" data-action="/evidence">[e] evidence</li>
+              <li class="prompt input" data-key="P" data-action="/process">[p] process</li>
+              <li class="prompt input subtle" data-key="X" data-action="close">[x] exit</li>
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <!-- <div class="container">
     <div class="row">
       <nav class="col-3">
         <h2>Menu?</h2>
@@ -30,7 +61,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Destructive Audio Player</a></li>
           <li><a href="#">Artifacts</a></li>
-          <li><a href="#">Meta</a></li> <!-- studio recording artifacts like photo/video unrelated to themes -->
+          <li><a href="#">Meta</a></li> 
         </ul>
       </nav>
 
@@ -41,7 +72,7 @@
         </p>
       </main>
     </div>
-  </div>
+  </div> -->
 
 </body>
 </html>

@@ -1,0 +1,74 @@
+// General Styles
+// --------------
+// This is where site-wide generic
+// styles go. Page-specific stuff go 
+// into their own files.
+
+body {
+  background: @bg;
+
+  main {
+    nav {
+      ul {
+        list-style-type: none !important;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+// Terminal
+// --------
+// Terminal rendering stuff
+.prompt::before {
+  content: ">";
+  margin-right: 8px;
+  color: #888;
+}
+
+.input {
+  cursor: pointer;
+}
+
+.input:hover {
+  color: #fff;
+}
+
+.input {
+  cursor: pointer;
+}
+
+.subtle {
+  color: @text-dim;
+}
+
+.input:hover {
+  color: #fff;
+}
+
+// Modal menu
+// ----------
+// Main nav
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(6px);
+  display: none;
+  z-index: 100;
+}
+
+/* visible state */
+.menu-overlay.open {
+  display: block;
+}
+
+.menu-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.menu-inner .line {
+  // font-size: 18px;
+}

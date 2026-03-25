@@ -2,9 +2,16 @@
  * Site-wide color scheme
  */
 
+@bg: #0a0a0a;        /* near black, softer than pure black */
+@bg-elevated: #111;  /* subtle layer separation */
+@text: #e8e8e8;      /* primary text */
+@text-dim: #888;     /* secondary / system tone */
+@accent: #bfbfbf;    /* interactive elements */
+@danger: #8a8a8a;    /* NOT red – neutral unease */
+
 // Text colors
-@body-color:      #505050;
-@headline-color:  #272727;
+@body-color:      @text; //#505050;
+@headline-color:  @text-dim; //#272727;
 
 // Blacks and whites
 @black:           #272727;
@@ -22,6 +29,6 @@
 @red:             #C0392B;
 
 // Links
-@link-color:      @orange;
+@link-color:      @accent; //@orange;
 @hlink-color:     darken(@link-color, 5%);
-@vlink-color:     @link-color;
+@vlink-color:     lighten(@link-color, 5%);
