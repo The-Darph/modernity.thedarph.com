@@ -13,8 +13,12 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
     entry: {
-        index: './src/js/index.js',
-        session: './src/js/session.js'
+        index:    './src/js/index.js',
+        session:  './src/js/session.js',
+        listen:   './src/js/listen.js',
+        evidence: './src/js/evidence.js',
+        process:  './src/js/process.js'
+        
     },
     output: {
         filename: 'js/[name].js',
@@ -36,6 +40,24 @@ const config = {
             inject: true,
             chunks: ['session'],
             filename: 'session/index.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/listen/index.html',
+            inject: true,
+            chunks: ['listen'],
+            filename: 'listen/index.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/index.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/index.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/process/index.html',
+            inject: true,
+            chunks: ['process'],
+            filename: 'process/index.html'
         }),
 
         new MiniCssExtractPlugin(),
