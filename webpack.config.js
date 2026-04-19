@@ -17,7 +17,8 @@ const config = {
         session:  './src/js/session.js',
         listen:   './src/js/listen.js',
         evidence: './src/js/evidence.js',
-        process:  './src/js/process.js'
+        process:  './src/js/process.js',
+        '404':    './src/js/404.js'
         
     },
     output: {
@@ -53,11 +54,17 @@ const config = {
             chunks: ['evidence'],
             filename: 'evidence/index.html'
         }),
-         new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             template: './src/process/index.html',
             inject: true,
             chunks: ['process'],
             filename: 'process/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/404.html',
+            inject: true,
+            chunks: ['404'],
+            filename: '404.html'
         }),
 
         new MiniCssExtractPlugin(),

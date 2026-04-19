@@ -4,7 +4,7 @@ const general = require('./general.js');
 
 const today = new Date();
 const firstLine = document.querySelector(".line");
-general.typeLine(firstLine, "> Nothing touched survives intact.");
+general.typeLine(firstLine, "> error state encountered " + new Date().toString());
 
 const inputs = document.querySelectorAll(".input");
 
