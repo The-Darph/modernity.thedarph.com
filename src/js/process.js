@@ -4,7 +4,7 @@ const general = require('./general.js');
 
 const today = new Date();
 const firstLine = document.querySelector(".line");
-general.typeLine(firstLine, "> session initialized " + new Date().toString());
+general.typeLine(firstLine, "> written. recorded. mastered :: " + new Date().toString());
 
 const inputs = document.querySelectorAll(".input");
 
