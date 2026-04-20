@@ -12,4 +12,3 @@ npm run build
 - Write deploy instructions
 - Write up deploy prep instructions
 	- No we do not need Docker for everything. Node, Ruby, etc. doesn't need a container it's not that complicated, stop complicating everything just because Zuckenborg decided it was cool to do so while he was eating beef brisket or whatever
-
