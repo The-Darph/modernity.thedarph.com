@@ -54,6 +54,76 @@ const config = {
             chunks: ['evidence'],
             filename: 'evidence/index.html'
         }),
+
+         // === Artifact Pages ===\\
+         new HtmlWebpackPlugin({
+            template: './src/evidence/american_kirk.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/american_kirk.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/atom_bomb.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/atom_bomb.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/custom_tape_archive.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/custom_tape_archive.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/darkness_dominator_host.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/darkness_dominator_host.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/domestic_surveillance_memo.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/domestic_surveillance_memo.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/how_it_is.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/how_it_is.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/influencer.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/influencer.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/manufactured_consent_surveillance.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/manufactured_consent_surveillance.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/NSPM-7_threat_assessment.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/NSPM-7_threat_assessment.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/source_of_extra_chromosomes.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/source_of_extra_chromosomes.html'
+        }),
+         new HtmlWebpackPlugin({
+            template: './src/evidence/tape_archive_1.html',
+            inject: true,
+            chunks: ['evidence'],
+            filename: 'evidence/tape_archive_1.html'
+        }),
+        // === End Artifact Pages ===\\
+
         new HtmlWebpackPlugin({
             template: './src/process/index.html',
             inject: true,
